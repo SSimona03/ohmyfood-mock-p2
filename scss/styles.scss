@@ -1,0 +1,21 @@
+@import "_styles-tablet";
+@import "_styles-desktop";
+
+$purple: #9356dc;
+$pink: #ff79da;
+$green: #99e2d0;
+$font-roboto: "Roboto", sans-serif;
+$font-Shrikhand: "Shrikhand", cursive;
+
+// -------------- body ---------------
+body {
+  font-family: $font-roboto;
+}
+
+// -------------- Header ---------------
+header {
+  p {
+    font-family: $font-Shrikhand;
+    font-size: 25px;
+  }
+}
