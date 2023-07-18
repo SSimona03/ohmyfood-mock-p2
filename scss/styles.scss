@@ -1,11 +1,4 @@
-@import "_styles-tablet";
-@import "_styles-desktop";
-
-$purple: #9356dc;
-$pink: #ff79da;
-$green: #99e2d0;
-$font-roboto: "Roboto", sans-serif;
-$font-Shrikhand: "Shrikhand", cursive;
+@import "_variables";
 
 // -------------- body ---------------
 body {
@@ -13,9 +6,49 @@ body {
 }
 
 // -------------- Header ---------------
+
 header {
+  width: 100vw;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  @include flex(center, column);
+  .logo {
+    top: 0;
+    position: absolute;
+    padding: 13px 0;
+    text-align: center;
+    width: 100%;
+    -webkit-box-shadow: -1px 2px 7px 2px rgba(0, 0, 0, 0.16);
+    box-shadow: -1px 2px 7px 2px rgba(0, 0, 0, 0.16);
+  }
   p {
     font-family: $font-Shrikhand;
-    font-size: 25px;
+    font-size: 2rem;
+    margin: 0rem; //root em 1rem = 16px root - em is based on current font size
+  }
+
+  .location {
+    margin-top: 63px;
+    @include flex(center, center);
+    width: 100%;
+    text-align: center;
+    background-color: $dark-gray;
+    padding: 15px 0;
+    i {
+      padding-right: 10px;
+    }
+    .mobile-max-width {
+      @include mobile-max-w;
+      width: 100%;
+    }
   }
 }
+main {
+  margin-top: 110px;
+}
+// -------------- Imports media ---------------
+@import "_styles-tablet";
+@import "_styles-desktop";

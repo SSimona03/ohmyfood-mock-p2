@@ -1,0 +1,25 @@
+$purple: #9356dc;
+$pink: #ff79da;
+$green: #99e2d0;
+$dark-gray: #eaeaea;
+$light-gray: #f6f6f6;
+$light-dark: #363636;
+$font-roboto: "Roboto", sans-serif;
+$font-Shrikhand: "Shrikhand", cursive;
+
+@mixin mobile-max-w {
+  max-width: 500px;
+  margin: 0 20px;
+}
+
+@mixin flex($justify-c, $direction: default) {
+  display: flex;
+  justify-content: $justify-c;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin margin-tablet {
+  margin-left: 25px;
+  margin-right: 25px;
+}
