@@ -5,6 +5,9 @@
 body {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
+  width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 header {
@@ -43,23 +46,43 @@ header .box-max-w p {
 }
 header .box-max-w .location {
   margin-top: 63px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: center;
   width: 100%;
   text-align: center;
   background-color: #eaeaea;
   padding: 15px 0;
 }
-header .box-max-w .location i {
-  padding-right: 10px;
-}
-header .box-max-w .location .mobile-max-width {
+header .box-max-w .location form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: center;
   max-width: 500px;
   margin: auto;
   padding-left: 30px;
   padding-right: 30px;
+}
+header .box-max-w .location form i {
+  margin-left: 20px;
+}
+header .box-max-w .location form input {
+  padding: 3px;
+  border: none;
+  background-color: inherit;
+  text-align: center;
+}
+header .box-max-w .location form input:active, header .box-max-w .location form input:focus, header .box-max-w .location form input:focus-visible {
+  border: none;
+  outline: none;
+}
+
+textarea,
+input[type=search],
+input[type=button],
+input[type=submit] {
+  border-radius: 0px;
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
+  background-color: inherit;
 }
 
 main {
