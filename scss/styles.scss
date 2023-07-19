@@ -7,9 +7,7 @@
 // -------------- body ---------------
 body {
   font-family: $font-roboto;
-  max-width: 100%;
-  width: 100vw;
-  min-height: calc(100vh - 111.3px);
+  box-sizing: border-box;
 }
 
 // -------------- Header ---------------

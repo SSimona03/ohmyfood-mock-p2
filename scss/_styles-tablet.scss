@@ -3,8 +3,7 @@
 @media (min-width: 768px) {
   body {
     width: 100vw;
-    min-height: calc(100vh - 62.8px);
-    position: relative;
+    box-sizing: border-box;
   }
   // -------------- Header ---------------
 
@@ -32,6 +31,7 @@
 
   main {
     margin-top: 63px;
+    height: calc(100vh - 63px - 203px);
     // -------------- Intro ---------------
     .intro {
       h1 {
