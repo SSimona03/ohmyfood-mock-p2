@@ -7,9 +7,43 @@ $light-dark: #363636;
 $font-roboto: "Roboto", sans-serif;
 $font-Shrikhand: "Shrikhand", cursive;
 
+@mixin gradient {
+  background: rgb(147, 86, 220);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(147, 86, 220, 1) 0%,
+    rgba(221, 106, 189, 1) 81%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(147, 86, 220, 1) 0%,
+    rgba(221, 106, 189, 1) 81%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(147, 86, 220, 1) 0%,
+    rgba(221, 106, 189, 1) 81%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#dd6abd",GradientType=1);
+}
+
 @mixin mobile-max-w {
   max-width: 500px;
-  margin: 0 20px;
+  margin: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+@mixin mobile-px {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+@mixin margin-tablet {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+@mixin desktop-max-w {
+  max-width: 1250px;
 }
 
 @mixin flex($justify-c, $direction: default) {
@@ -17,9 +51,4 @@ $font-Shrikhand: "Shrikhand", cursive;
   justify-content: $justify-c;
   align-items: center;
   flex-direction: $direction;
-}
-
-@mixin margin-tablet {
-  margin-left: 25px;
-  margin-right: 25px;
 }

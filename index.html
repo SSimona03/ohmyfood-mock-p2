@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Shrikhand&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap"
       rel="stylesheet"
     />
     <link
@@ -34,17 +34,151 @@
   <body>
     <!-------------- header --------------->
     <header>
-      <div class="logo">
-        <p>ohmyfood</p>
-      </div>
-      <div class="location">
-        <div class="mobile-max-width">
-          <i class="fa-solid fa-location-dot" style="color: #3d3d3d"></i> Paris,
-          Belleville
+      <div class="box-max-w">
+        <div class="logo" role="logo-text">
+          <p>ohmyfood</p>
+        </div>
+        <div class="location">
+          <div class="mobile-max-width">
+            <i class="fa-solid fa-location-dot" style="color: #3d3d3d"></i>
+            Paris, Belleville
+          </div>
         </div>
       </div>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+      <!-------------- Intro --------------->
+      <section class="intro">
+        <h1>Book the menu you like</h1>
+
+        <p>Discover top-of-the-art restaurants we picked for you</p>
+
+        <a href="#restaurants" role="button">Explore our restaurants</a>
+      </section>
+      <!-------------- How it workes --------------->
+      <section class="howItWorks">
+        <h2>How it works</h2>
+        <div class="howItWorks-cards">
+          <div class="howItWorks-one-card">
+            <p>1</p>
+            <i
+              class="fa-solid fa-mobile-screen-button"
+              style="color: #7e7e7e"
+            ></i>
+            <p>Chose a restaurant</p>
+          </div>
+          <div class="howItWorks-one-card">
+            <p>2</p>
+            <i class="fa-solid fa-list-ul" style="color: #7e7e7e"></i>
+            <p>Create your menu</p>
+          </div>
+          <div class="howItWorks-one-card">
+            <p>3</p>
+            <i class="fa-solid fa-shop" style="color: #9356dc"></i>
+            <p>Go enjoy it at the restaurant</p>
+          </div>
+        </div>
+      </section>
+      <!-------------- Restaurants --------------->
+      <section class="restaurants" id="restaurants">
+        <h2>Restaurants</h2>
+        <div class="res-cards">
+          <!-------------- Restaurants cards--------------->
+          <!-------------- Restaurants card 1--------------->
+          <div class="res-card-one">
+            <div class="res-card-img">
+              <img
+                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                alt="res-food-image"
+              />
+            </div>
+            <div class="res-card-one-info">
+              <div class="res-card-one-text-01">
+                <p>The Full Palette</p>
+                <p>New York</p>
+                <div class="res-card-one-logo-02">
+                  <i class="fa-regular fa-heart" style="color: #363636"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-------------- Restaurants card 2--------------->
+          <div class="res-card-one">
+            <div class="res-card-img">
+              <img
+                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                alt="res-food-image"
+              />
+            </div>
+            <div class="res-card-one-info">
+              <div class="res-card-one-text-01">
+                <p>The Full Palette</p>
+                <p>New York</p>
+                <div class="res-card-one-logo-02">
+                  <i class="fa-regular fa-heart" style="color: #363636"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-------------- Restaurants card 3--------------->
+          <div class="res-card-one">
+            <div class="res-card-img">
+              <img
+                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                alt="res-food-image"
+              />
+            </div>
+            <div class="res-card-one-info">
+              <div class="res-card-one-text-01">
+                <p>The Full Palette</p>
+                <p>New York</p>
+                <div class="res-card-one-logo-02">
+                  <i class="fa-regular fa-heart" style="color: #363636"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-------------- Restaurants card 4--------------->
+          <div class="res-card-one">
+            <div class="res-card-img">
+              <img
+                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+                alt="res-food-image"
+              />
+            </div>
+            <div class="res-card-one-info">
+              <div class="res-card-one-text-01">
+                <p>The Full Palette</p>
+                <p>New York</p>
+                <div class="res-card-one-logo-02">
+                  <i class="fa-regular fa-heart" style="color: #363636"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-------------- Footer --------------->
+    <footer>
+      <div class="footer-info">
+        <p>ohmyfood</p>
+        <div class="footer-into-links">
+          <a href="/"
+            ><i class="fa-solid fa-utensils" style="color: #ffffff"></i> Suggest
+            a restaurant</a
+          >
+          <a href="/"
+            ><i
+              class="fa-solid fa-handshake-simple fa-sm"
+              style="color: #ffffff"
+            ></i
+            >Become a partner</a
+          >
+          <a href="/">Legal</a>
+          <a href="/">Contact</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
