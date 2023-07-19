@@ -4,9 +4,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  max-width: 100%;
-  width: 100vw;
-  min-height: calc(100vh - 111.3px);
+  box-sizing: border-box;
 }
 
 header {
@@ -224,8 +222,7 @@ footer .footer-info a i {
 @media (min-width: 768px) {
   body {
     width: 100vw;
-    min-height: calc(100vh - 62.8px);
-    position: relative;
+    box-sizing: border-box;
   }
   header {
     display: flex;
@@ -257,6 +254,7 @@ footer .footer-info a i {
   }
   main {
     margin-top: 63px;
+    height: calc(100vh - 63px - 203px);
   }
   main .intro h1 {
     font-size: 36px;
