@@ -1,7 +1,25 @@
 @import "_variables";
 
 @media (min-width: 992px) {
-  body {
-    background-color: pink;
+  // -------------- Heather---------------
+  header {
+    .box-max-w {
+      width: 100%;
+      @include desktop-max-w;
+      margin: auto;
+    }
+  }
+  main {
+    // -------------- How it works ---------------
+    .howItWorks {
+      @include desktop-max-w;
+      margin: auto;
+    }
+  }
+  // -------------- Footer ---------------
+  footer {
+    .footer-info {
+      @include desktop-max-w;
+    }
   }
 }

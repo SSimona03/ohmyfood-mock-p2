@@ -1,8 +1,15 @@
 @import "_variables";
 
+* {
+  box-sizing: border-box;
+}
+
 // -------------- body ---------------
 body {
   font-family: $font-roboto;
+  max-width: 100%;
+  width: 100vw;
+  min-height: calc(100vh - 111.3px);
 }
 
 // -------------- Header ---------------
@@ -15,6 +22,8 @@ header {
   top: 0;
   background-color: white;
   @include flex(center, column);
+  z-index: 1;
+
   .logo {
     top: 0;
     position: absolute;
@@ -24,31 +33,170 @@ header {
     -webkit-box-shadow: -1px 2px 7px 2px rgba(0, 0, 0, 0.16);
     box-shadow: -1px 2px 7px 2px rgba(0, 0, 0, 0.16);
   }
-  p {
-    font-family: $font-Shrikhand;
-    font-size: 2rem;
-    margin: 0rem; //root em 1rem = 16px root - em is based on current font size
-  }
-
-  .location {
-    margin-top: 63px;
-    @include flex(center, center);
+  .box-max-w {
+    @include flex(center, column);
     width: 100%;
-    text-align: center;
-    background-color: $dark-gray;
-    padding: 15px 0;
-    i {
-      padding-right: 10px;
+    p {
+      font-family: $font-Shrikhand;
+      font-size: 2rem;
+      margin: 0rem; //root em 1rem = 16px root - em is based on current font size
     }
-    .mobile-max-width {
-      @include mobile-max-w;
+
+    .location {
+      margin-top: 63px;
+      @include flex(center, center);
       width: 100%;
+      text-align: center;
+      background-color: $dark-gray;
+      padding: 15px 0;
+      i {
+        padding-right: 10px;
+      }
+      .mobile-max-width {
+        @include mobile-max-w;
+      }
     }
   }
 }
+
 main {
   margin-top: 110px;
+
+  // -------------- Intro ---------------
+  .intro {
+    position: relative;
+    background-color: $light-gray;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    @include mobile-px;
+
+    p {
+      width: 350px;
+      margin: auto;
+      padding-top: 10px;
+      margin-bottom: 50px;
+      font-size: 18px;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+    a {
+      text-decoration: none;
+      position: relative;
+      padding: 13px 27px;
+      border-radius: 20px;
+      color: white;
+      border: none;
+      @include gradient;
+      font-family: $font-roboto;
+      font-weight: 500;
+      -webkit-tap-highlight-color: transparent;
+    }
+    a:hover,
+    a:focus,
+    a:active {
+      filter: brightness(92%);
+    }
+  }
+  //-------------- How it workes --------------
+  .howItWorks {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    @include mobile-px;
+    @include mobile-max-w;
+    margin: auto;
+    .howItWorks-one-card {
+      width: 300px;
+      @include flex(start, row);
+      margin: 25px auto;
+      padding: 5px 10px;
+      background-color: $light-gray;
+      border-radius: 20px;
+      -webkit-box-shadow: 2px 2px 14px 0px #d0d0d0;
+      box-shadow: 2px 2px 14px 0px #d0d0d0;
+      font-weight: 500;
+      position: relative;
+      i {
+        font-size: 18px;
+        margin: 0 20px;
+      }
+      p:first-child {
+        color: white;
+        font-size: 13px;
+        font-weight: 400;
+        background-color: $purple;
+        padding: 4px 8px;
+        border-radius: 10px;
+        position: absolute;
+        left: -10px;
+      }
+    }
+    .howItWorks-one-card:last-child {
+      background-color: fade-out($purple, 0.85);
+    }
+  }
+  // -------------- Restaurants ---------------
+  .restaurants {
+    @include mobile-px;
+    background-color: $light-gray;
+    h2 {
+      padding-top: 50px;
+      padding-bottom: 10px;
+    }
+    .res-cards {
+      @include mobile-max-w;
+      @include flex(start, column);
+      .res-card-one {
+        border-radius: 15px;
+        /* offset-x | offset-y | blur-radius | color */
+        box-shadow: 0px 5px 5px rgba(218, 215, 215, 0.391);
+        padding: 5px;
+        background-color: white;
+        margin-bottom: 20px;
+        .res-card-img {
+          width: 300px;
+          img {
+            border-radius: 15px 15px 0 0;
+            width: 300px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
 }
+// -------------- Footer ---------------
+footer {
+  margin-top: 30px;
+  width: 100%;
+  background-color: $light-dark;
+  color: white;
+  padding: 20px 0 40px 0;
+
+  p {
+    font-size: 22px;
+    color: white;
+    font-family: $font-Shrikhand;
+    letter-spacing: 1px;
+  }
+  .footer-info {
+    @include mobile-max-w;
+    margin: 0;
+    .footer-into-links {
+      @include flex(start, column);
+      align-items: start;
+    }
+    a {
+      margin: 5px 0;
+      text-decoration: none;
+      color: white;
+      i {
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
 // -------------- Imports media ---------------
 @import "_styles-tablet";
 @import "_styles-desktop";

@@ -2,29 +2,90 @@
 
 @media (min-width: 768px) {
   body {
-    background-color: rgb(192, 225, 255);
+    width: 100vw;
+    min-height: calc(100vh - 62.8px);
+    position: relative;
   }
-
   // -------------- Header ---------------
 
   header {
     @include flex(space-between, row);
-    mobile-max-width {
-      all: unset;
+
+    .box-max-w {
+      @include flex(space-between, row);
+      .logo {
+        @include margin-tablet;
+        width: 200px;
+        position: relative;
+        -webkit-box-shadow: unset;
+        box-shadow: unset;
+      }
+      .location {
+        margin: 0;
+        width: 250px;
+        border-radius: 10px;
+        padding: 10px 0;
+        @include margin-tablet;
+      }
     }
-    .logo {
-      @include margin-tablet;
-      width: 200px;
-      position: relative;
-      -webkit-box-shadow: unset;
-      box-shadow: unset;
+  }
+
+  main {
+    margin-top: 63px;
+    // -------------- Intro ---------------
+    .intro {
+      h1 {
+        font-size: 36px;
+      }
+      p {
+        width: 550px;
+      }
     }
-    .location {
+    // -------------- How it works ---------------
+    .howItWorks {
       margin: 0;
-      width: 250px;
-      border-radius: 10px;
-      padding: 10px 0;
+      width: 100%;
       @include margin-tablet;
+      max-width: 100%;
+      .howItWorks-cards {
+        @include flex(start, row);
+        flex-wrap: wrap;
+        .howItWorks-one-card {
+          margin: 10px 30px 10px 0;
+        }
+      }
+    }
+    // -------------- Restaurants ---------------
+    .restaurants {
+      .res-cards {
+        max-width: none;
+        @include flex(start, row);
+        align-items: start;
+        width: 100%;
+        overflow: scroll;
+
+        .res-card-one {
+          margin-right: 20px;
+          color: black;
+        }
+      }
+    }
+  }
+  // -------------- Footer ---------------
+  footer {
+    .footer-info {
+      max-width: unset;
+      text-align: center;
+      @include margin-tablet;
+      margin: auto;
+      .footer-into-links {
+        margin: auto;
+        max-width: 700px;
+        @include flex(space-between, row);
+        a {
+          margin-top: 20px;
+        }
+      }
     }
   }
 }
