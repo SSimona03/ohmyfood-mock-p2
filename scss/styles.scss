@@ -163,31 +163,76 @@ main {
   }
   // -------------- Restaurants ---------------
   .restaurants {
-    @include mobile-max-w;
     padding: 0;
     padding-top: 20px;
+    padding-bottom: 50px;
+    margin-top: 30px;
     background-color: $light-gray;
-    .res-cards {
+    // --------------    Restaurants  each group  ----------------
+    .res-group {
+      @include mobile-max-w;
       width: 330px;
       margin: auto;
-      h2 {
-        padding-left: 15px;
-        text-align: left;
-        width: 100%;
-      }
+
       @include flex(start, column);
-      .res-card-one {
-        border-radius: 15px;
-        /* offset-x | offset-y | blur-radius | color */
-        box-shadow: 0px 5px 5px rgba(218, 215, 215, 0.391);
-        background-color: white;
-        margin-bottom: 20px;
-        .res-card-img {
-          width: 300px;
-          img {
-            border-radius: 15px 15px 0 0;
-            width: 300px;
-            object-fit: cover;
+      h2 {
+        text-align: left;
+        width: 300px;
+      }
+
+      // --------------    Restaurants  each card  ----------------
+      a {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+      }
+      .res-cards {
+        height: 100%;
+        .res-card-one {
+          height: 220px;
+          width: 320px;
+          border-radius: 15px;
+          /* offset-x | offset-y | blur-radius | color */
+          box-shadow: 0px 5px 5px rgba(218, 215, 215, 0.391);
+          background-color: white;
+          margin-bottom: 20px;
+
+          .res-card-img {
+            img {
+              border-radius: 15px 15px 0 0;
+              width: 100%;
+              height: 150px;
+              object-fit: cover;
+            }
+          }
+
+          .res-card-one-info {
+            position: relative;
+            padding: 10px 35px 20px 15px;
+            @include flex(space-between, row);
+            .res-card-one-text-01 {
+              p:first-child {
+                font-weight: 600;
+                margin: 0;
+                padding-bottom: 5px;
+              }
+              p:last-child {
+                font-size: 15px;
+                margin: 0;
+                font-weight: 300;
+              }
+            }
+            .res-card-one-logo-02 {
+              position: absolute;
+              top: 20px;
+              right: 15px;
+              .heart {
+                fill: red;
+                position: relative;
+                width: 25px;
+                animation: pulse 1s ease infinite;
+              }
+            }
           }
         }
       }

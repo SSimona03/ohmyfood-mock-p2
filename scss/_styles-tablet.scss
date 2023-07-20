@@ -1,10 +1,6 @@
 @import "_variables";
 
 @media (min-width: 768px) {
-  body {
-    width: 100vw;
-    box-sizing: border-box;
-  }
   // -------------- Header ---------------
 
   header {
@@ -30,8 +26,21 @@
   }
 
   main {
-    margin-top: 63px;
-    height: calc(100vh - 63px - 203px);
+    margin-top: 100px;
+    height: calc(100vh - 203px - 100px);
+    .tablet-desktop-box {
+      border-radius: 5px;
+      margin: auto;
+      @include flex(justify-content, row);
+      background-color: $dark-gray;
+      .intro {
+        flex: 1;
+        background-color: transparent;
+      }
+      .howItWorks {
+        flex: 0.7;
+      }
+    }
     // -------------- Intro ---------------
     .intro {
       h1 {
@@ -44,10 +53,53 @@
     // -------------- How it works ---------------
     .howItWorks {
       text-align: center;
-      @include margin-tablet;
-      max-width: 100%;
     }
     // -------------- Restaurants ---------------
+    .restaurants {
+      padding-top: 100px;
+      background-color: transparent;
+      // --------------    Restaurants  each group  ----------------
+      .res-group {
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+        align-items: unset;
+        width: 100%;
+        h2 {
+          @include margin-tablet;
+          padding-left: 15px;
+        }
+        .res-cards {
+          @include margin-tablet;
+          @include flex(start, row);
+
+          .res-card-one {
+            height: 330px;
+
+            margin-left: 5px;
+            margin-right: 5px;
+            a {
+              height: 330px;
+
+              .res-card-img {
+                img {
+                  height: 230px;
+                }
+              }
+              .res-card-one-info {
+                .res-card-one-logo-02 {
+                  right: 9px;
+                }
+              }
+
+              p {
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+    }
   }
   // -------------- Footer ---------------
   footer {
