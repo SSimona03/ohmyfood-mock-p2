@@ -124,7 +124,7 @@ main .intro a {
 main .intro a:hover,
 main .intro a:focus,
 main .intro a:active {
-  filter: brightness(92%);
+  filter: brightness(110%);
 }
 main .howItWorks {
   padding-top: 30px;
@@ -182,6 +182,11 @@ main .restaurants {
   margin-top: 30px;
   background-color: #f6f6f6;
 }
+main .restaurants a:hover,
+main .restaurants a:focus,
+main .restaurants a:active {
+  filter: brightness(110%);
+}
 main .restaurants .res-group {
   max-width: 500px;
   margin: auto;
@@ -215,11 +220,24 @@ main .restaurants .res-group .res-cards .res-card-one {
   background-color: white;
   margin-bottom: 20px;
 }
+main .restaurants .res-group .res-cards .res-card-one .res-card-img {
+  position: relative;
+}
 main .restaurants .res-group .res-cards .res-card-one .res-card-img img {
   border-radius: 15px 15px 0 0;
   width: 100%;
   height: 150px;
   object-fit: cover;
+}
+main .restaurants .res-group .res-cards .res-card-one .res-card-img p {
+  position: absolute;
+  font-size: 15px;
+  color: #008766;
+  top: 0px;
+  right: 10px;
+  background-color: #99e2d0;
+  padding: 6px 23px;
+  border-radius: 3px;
 }
 main .restaurants .res-group .res-cards .res-card-one .res-card-one-info {
   position: relative;
@@ -245,10 +263,27 @@ main .restaurants .res-group .res-cards .res-card-one .res-card-one-info .res-ca
   right: 15px;
 }
 main .restaurants .res-group .res-cards .res-card-one .res-card-one-info .res-card-one-logo-02 .heart {
-  fill: red;
   position: relative;
-  width: 25px;
-  animation: pulse 1s ease infinite;
+  width: 30px;
+  height: 30px;
+  fill: transparent;
+}
+main .restaurants .res-group .res-cards .res-card-one .res-card-one-info .res-card-one-logo-02 .heart :hover,
+main .restaurants .res-group .res-cards .res-card-one .res-card-one-info .res-card-one-logo-02 .heart :active {
+  animation: opacity 0.4s ease-in;
+  fill: url(#gradient);
+  stroke: #ffffff;
+}
+@keyframes opacity {
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  0% {
+    opacity: 0;
+  }
 }
 
 footer {
