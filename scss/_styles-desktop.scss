@@ -23,11 +23,11 @@
     .restaurants {
       max-width: 1214px;
       margin: auto;
-
       .res-group {
         h2 {
           margin-left: 0;
           margin-right: 0;
+
           @include desktop-max-w;
         }
         .res-cards {

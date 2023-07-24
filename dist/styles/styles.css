@@ -15,7 +15,6 @@ input[type=button],
 input[type=submit] {
   border-radius: 0px;
   -webkit-border-radius: 0;
-  -webkit-appearance: none;
   background-color: inherit;
 }
 
@@ -177,9 +176,8 @@ main .howItWorks .howItWorks-one-card:last-child {
 }
 main .restaurants {
   padding: 0;
-  padding-top: 20px;
+  padding-top: 40px;
   padding-bottom: 50px;
-  margin-top: 30px;
   background-color: #f6f6f6;
 }
 main .restaurants a:hover,
@@ -354,6 +352,7 @@ footer .footer-info a i {
   main {
     margin-top: 100px;
     height: calc(100vh - 203px - 100px);
+    overflow: auto;
   }
   main .tablet-desktop-box {
     border-radius: 5px;
@@ -381,7 +380,6 @@ footer .footer-info a i {
     text-align: center;
   }
   main .restaurants {
-    padding-top: 100px;
     background-color: transparent;
   }
   main .restaurants .res-group {
@@ -405,12 +403,8 @@ footer .footer-info a i {
     flex-direction: row;
   }
   main .restaurants .res-group .res-cards .res-card-one {
-    height: 330px;
     margin-left: 5px;
     margin-right: 5px;
-  }
-  main .restaurants .res-group .res-cards .res-card-one a {
-    height: 330px;
   }
   main .restaurants .res-group .res-cards .res-card-one a .res-card-img img {
     height: 230px;
