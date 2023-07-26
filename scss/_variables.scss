@@ -12,7 +12,7 @@ $font-Shrikhand: "Shrikhand", cursive;
   background: -moz-linear-gradient(
     0deg,
     rgba(147, 86, 220, 1) 0%,
-    rgba(221, 106, 189, 1) 81%
+    P rgba(221, 106, 189, 1) 81%
   );
   background: -webkit-linear-gradient(
     0deg,
@@ -30,8 +30,8 @@ $font-Shrikhand: "Shrikhand", cursive;
 @mixin mobile-max-w {
   max-width: 500px;
   margin: auto;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 @mixin mobile-px {
   padding-left: 30px;

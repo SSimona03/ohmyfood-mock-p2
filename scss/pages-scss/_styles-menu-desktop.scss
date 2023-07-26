@@ -1,0 +1,30 @@
+@import "../_variables";
+$width: 1250px;
+
+@media (min-width: 992px) {
+  // -------------- Header ------------------
+  header {
+    .header-menu {
+      @include desktop-max-w;
+      margin: auto;
+    }
+  }
+  // -------------- Main ------------------
+  main {
+    .main-image {
+      @include desktop-max-w;
+      margin: auto;
+      img {
+        @media (min-width: 1251px) {
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+  // -------------- Footer ---------------
+  footer {
+    .footer-info {
+      @include desktop-max-w;
+    }
+  }
+}
