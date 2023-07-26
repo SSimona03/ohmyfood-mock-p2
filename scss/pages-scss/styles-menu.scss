@@ -1,0 +1,101 @@
+// all menue's mobile styles
+@import "../variables";
+
+* {
+  box-sizing: border-box;
+}
+
+// -------------- body / general ---------------
+body {
+  font-family: $font-roboto;
+  box-sizing: border-box;
+  width: 100vw;
+  max-width: 100%;
+  position: relative;
+}
+
+// -------------- Header ---------------
+
+header {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background-color: white;
+  z-index: 1;
+
+  .header-menu {
+    @include flex(center, row);
+    @include mobile-max-w;
+    a {
+      text-decoration: unset;
+      p {
+        color: black;
+        width: 50px;
+        margin: 0;
+        font-size: 30px;
+        font-weight: 900;
+      }
+    }
+
+    .logo {
+      font-family: $font-Shrikhand;
+      margin: auto;
+      font-size: 2rem;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+// -------------- Main ------------------
+main {
+  position: relative;
+  margin-top: 20px;
+  // -------------- Main - IMAGE ------------------
+  .main-image {
+    height: 300px;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+// -------------- Footer ---------------
+footer {
+  margin-top: 30px;
+  width: 100%;
+  background-color: $light-dark;
+  color: white;
+  padding: 20px 0 40px 0;
+
+  p {
+    font-size: 22px;
+    color: white;
+    font-family: $font-Shrikhand;
+    letter-spacing: 1px;
+  }
+  .footer-info {
+    @include mobile-max-w;
+    padding-left: 25px;
+    margin: 0;
+    .footer-into-links {
+      @include flex(start, column);
+      align-items: start;
+    }
+    a {
+      margin: 5px 0;
+      text-decoration: none;
+      color: white;
+      i {
+        padding-right: 10px;
+      }
+    }
+  }
+}
+// -------------- Imports media ---------------
+
+@import "./_styles-menu-tablet";
+@import "./_styles-menu-desktop";

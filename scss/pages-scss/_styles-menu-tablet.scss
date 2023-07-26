@@ -1,0 +1,45 @@
+@import "../_variables";
+
+@media (min-width: 768px) {
+  // -------------- Header ------------------
+  header {
+    margin: auto;
+    .header-menu {
+      @include margin-tablet;
+      margin: auto;
+      max-width: unset;
+      .logo {
+        text-align: left;
+        padding-left: 10px;
+      }
+    }
+  }
+
+  // -------------- Main ------------------
+  main {
+    margin-top: 100px;
+    height: calc(100vh - 270px - 33px);
+    overflow: auto;
+    .main-image {
+      height: 350px;
+    }
+  }
+
+  // -------------- Footer ---------------
+  footer {
+    .footer-info {
+      max-width: unset;
+      text-align: center;
+      @include margin-tablet;
+      margin: auto;
+      .footer-into-links {
+        margin: auto;
+        max-width: 700px;
+        @include flex(space-between, row);
+        a {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
