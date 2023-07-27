@@ -52,3 +52,8 @@ $font-Shrikhand: "Shrikhand", cursive;
   align-items: center;
   flex-direction: $direction;
 }
+
+@mixin shadow-menu-container {
+  -webkit-box-shadow: -6px 5px 11px 5px rgba(216, 216, 216, 0.46);
+  box-shadow: -6px 5px 11px 5px rgba(216, 216, 216, 0.46);
+}

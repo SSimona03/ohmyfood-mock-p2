@@ -54,11 +54,154 @@ main {
   margin-top: 20px;
   // -------------- Main - IMAGE ------------------
   .main-image {
+    z-index: -1;
     height: 300px;
+    padding-top: 40px;
     img {
       height: 100%;
+
       width: 100%;
       object-fit: cover;
+    }
+    // -------------- Main - Title - Fav Icon ------------------
+  }
+  // -------------- Menu Section ------------------
+  .menu {
+    position: relative;
+    margin-top: -40px;
+    z-index: 0;
+    padding: 30px 0;
+    border-radius: 30px 30px 0 0px;
+    background-color: $light-gray;
+
+    .title-restaurant {
+      @include mobile-max-w;
+      position: relative;
+      p {
+        margin: 0;
+        font-size: 24px;
+        font-family: $font-Shrikhand;
+      }
+      button {
+        background-color: inherit;
+        border: none;
+      }
+      .fav-icon {
+        position: absolute;
+        top: 5px;
+        right: 15px;
+
+        .heart {
+          position: relative;
+          width: 30px;
+          height: 30px;
+
+          fill: transparent;
+          :hover,
+          :active {
+            animation: opacity 0.4s ease-in;
+            fill: url(#gradient);
+            stroke: #ffffff;
+            cursor: pointer;
+          }
+
+          @keyframes opacity {
+            100% {
+              opacity: 1;
+            }
+            50% {
+              opacity: 0.5;
+            }
+            0% {
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+    // -------------- Menu Items------------------
+    .menu-list {
+      @include mobile-max-w;
+      // -------------- Menu ENTREES------------------
+      .entrees {
+        .entrees-menu {
+          // -------------- Menu ENTREES container ------------------
+          .entrees-menu-container {
+            &:hover {
+              cursor: pointer;
+            }
+            &:hover .entrees-menu-checkbox {
+              transform: translateX(-100%);
+              transition: transform 0.8s ease;
+              i {
+                transform: rotate(350deg);
+                transition: transform 0.8s ease;
+              }
+            }
+            &:not(:hover) .entrees-menu-checkbox {
+              transition: transform 0.8s ease;
+            }
+
+            &:hover .entrees-menu-text {
+              flex-basis: 85%;
+            }
+            &:not(:hover).entrees-menu-text {
+              flex-basis: 100%;
+              transition: flex-basis 1s ease;
+            }
+            margin: 16px 0;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            height: 100%;
+            width: 100%;
+            @include flex(flex-start, row);
+            @include shadow-menu-container;
+
+            .entrees-menu-text {
+              flex-basis: 100%;
+              @include flex(flex-start, column);
+              align-items: unset;
+              p {
+                padding: 12px 0 10px 10px;
+                margin: 0;
+                font-size: 17px;
+              }
+              .entrees-menu-text-bottom {
+                width: 100%;
+                @include flex(space-between, row);
+                p {
+                  font-size: 15px;
+                  font-weight: 300;
+                  padding: 0px 15px 12px 10px;
+                }
+                strong {
+                  font-weight: 700;
+                }
+              }
+            }
+
+            .entrees-menu-checkbox {
+              position: absolute;
+              right: -60px;
+              background-color: $green;
+              text-align: center;
+              height: 100%;
+              width: 60px;
+
+              i {
+                position: absolute;
+                top: 35%;
+                left: 35%;
+                transform: translate(-35%, -35%);
+                transform: rotate(50deg);
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -52,12 +52,153 @@ main {
   margin-top: 20px;
 }
 main .main-image {
+  z-index: -1;
   height: 300px;
+  padding-top: 40px;
 }
 main .main-image img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+main .menu {
+  position: relative;
+  margin-top: -40px;
+  z-index: 0;
+  padding: 30px 0;
+  border-radius: 30px 30px 0 0px;
+  background-color: #f6f6f6;
+}
+main .menu .title-restaurant {
+  max-width: 500px;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+}
+main .menu .title-restaurant p {
+  margin: 0;
+  font-size: 24px;
+  font-family: "Shrikhand", cursive;
+}
+main .menu .title-restaurant button {
+  background-color: inherit;
+  border: none;
+}
+main .menu .title-restaurant .fav-icon {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+}
+main .menu .title-restaurant .fav-icon .heart {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  fill: transparent;
+}
+main .menu .title-restaurant .fav-icon .heart :hover,
+main .menu .title-restaurant .fav-icon .heart :active {
+  animation: opacity 0.4s ease-in;
+  fill: url(#gradient);
+  stroke: #ffffff;
+  cursor: pointer;
+}
+@keyframes opacity {
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  0% {
+    opacity: 0;
+  }
+}
+main .menu .menu-list {
+  max-width: 500px;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+main .menu .menu-list .entrees .entrees-menu .entrees-menu-container {
+  margin: 16px 0;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  -webkit-box-shadow: -6px 5px 11px 5px rgba(216, 216, 216, 0.46);
+  box-shadow: -6px 5px 11px 5px rgba(216, 216, 216, 0.46);
+}
+main .menu .menu-list .entrees .entrees-menu .entrees-menu-container:hover {
+  cursor: pointer;
+}
+main .menu .menu-list .entrees .entrees-menu .entrees-menu-container:hover .entrees-menu-checkbox {
+  transform: translateX(-100%);
+  transition: transform 0.8s ease;
+}
+main .menu .menu-list .entrees .entrees-menu .entrees-menu-container:hover .entrees-menu-checkbox i {
+  transform: rotate(350deg);
+  transition: transform 0.8s ease;
+}
+main .menu .menu-list .entrees .entrees-menu .entrees-menu-container:not(:hover) .entrees-menu-checkbox {
+  transition: transform 0.8s ease;
+}
+main .menu .menu-list .entrees .entrees-menu .entrees-menu-container:hover .entrees-menu-text {
+  flex-basis: 85%;
+}
+main .menu .menu-list .entrees .entrees-menu .entrees-menu-container:not(:hover).entrees-menu-text {
+  flex-basis: 100%;
+  transition: flex-basis 1s ease;
+}
+main .menu .menu-list .entrees .entrees-menu .entrees-menu-container .entrees-menu-text {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  align-items: unset;
+}
+main .menu .menu-list .entrees .entrees-menu .entrees-menu-container .entrees-menu-text p {
+  padding: 12px 0 10px 10px;
+  margin: 0;
+  font-size: 17px;
+}
+main .menu .menu-list .entrees .entrees-menu .entrees-menu-container .entrees-menu-text .entrees-menu-text-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+main .menu .menu-list .entrees .entrees-menu .entrees-menu-container .entrees-menu-text .entrees-menu-text-bottom p {
+  font-size: 15px;
+  font-weight: 300;
+  padding: 0px 15px 12px 10px;
+}
+main .menu .menu-list .entrees .entrees-menu .entrees-menu-container .entrees-menu-text .entrees-menu-text-bottom strong {
+  font-weight: 700;
+}
+main .menu .menu-list .entrees .entrees-menu .entrees-menu-container .entrees-menu-checkbox {
+  position: absolute;
+  right: -60px;
+  background-color: #99e2d0;
+  text-align: center;
+  height: 100%;
+  width: 60px;
+}
+main .menu .menu-list .entrees .entrees-menu .entrees-menu-container .entrees-menu-checkbox i {
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  transform: translate(-35%, -35%);
+  transform: rotate(50deg);
+  font-size: 20px;
 }
 
 footer {
@@ -118,6 +259,7 @@ footer .footer-info a i {
   }
   main .main-image {
     height: 350px;
+    padding-top: 0px;
   }
   footer .footer-info {
     max-width: unset;
