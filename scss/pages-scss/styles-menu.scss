@@ -70,7 +70,7 @@ main {
     position: relative;
     margin-top: -40px;
     z-index: 0;
-    padding: 30px 0;
+    padding: 40px 0;
     border-radius: 30px 30px 0 0px;
     background-color: $light-gray;
 
@@ -78,6 +78,7 @@ main {
       @include mobile-max-w;
       position: relative;
       margin: auto;
+      margin-bottom: 30px;
       p {
         margin: 0;
         font-size: 24px;
@@ -89,7 +90,7 @@ main {
       }
       .fav-icon {
         position: absolute;
-        top: 5px;
+        top: -2px;
         right: 20px;
 
         .heart {
@@ -124,43 +125,78 @@ main {
     .menu-list {
       @include mobile-max-w;
       // -------------- Menu ENTREES------------------
-      .entrees {
-        p {
-          font-size: 20px;
+      .menu-category {
+        position: relative;
+        // -------------- section title------------------
+        .menu-section {
+          font-size: 19px;
           font-weight: 300;
           letter-spacing: 0.7px;
+          margin: 20px 0;
+          margin-left: 5px;
+          // -------------- Menu ENTREES------------------
+          &::after {
+            content: "";
+            display: block;
+            height: 3px;
+            background: $green;
+            margin-top: 5px;
+            border-radius: 3px;
+            width: 0;
+          }
+
+          @keyframes lineAnimation {
+            to {
+              width: 50px;
+            }
+          }
         }
-        .entrees-menu {
-          // -------------- Menu ENTREES BOX ------------------
+        .delay-one::after {
+          animation: lineAnimation 0.7s ease forwards;
+        }
+        .delay-two::after {
+          animation: lineAnimation 0.7s ease forwards 0.3s;
+        }
+        .delay-three::after {
+          animation: lineAnimation 0.7s ease forwards 0.6s;
+        }
+        .sub-menu {
+          // -------------- Each BOX ------------------
           .menu-container {
             position: relative;
-            width: 470px;
+            margin-bottom: 15px;
+            max-width: 470px;
             overflow: hidden;
+            border-radius: 18px;
             background-color: white;
             @include flex(space-between, row);
             @include shadow-menu-container;
-            border-radius: 18px;
+            animation: fadeInUp 1s ease-in-out;
+            opacity: 0;
+
             &:hover {
               cursor: pointer;
             }
             // -------------- Item BOX text side hover------------------
             &:hover .menu-text-container {
               width: 77%;
-              transition: width 0.8s ease;
+              transition: width 0.5s ease;
             }
+
             &:not(:hover) .menu-text-container {
               width: 100%;
-              transition: width 0.8s ease;
+              transition: width 0.5s ease;
             }
             // -------------- Item BOX checkbox hover------------------
             &:hover .menu-checkbox {
               transform: translateX(-100%);
-              transition: transform 0.8s ease;
+              transition: transform 0.6s ease;
               .menu-checkbox-icon i {
                 transform: rotate(350deg);
-                transition: transform 0.8s ease;
+                transition: transform 0.6s ease;
               }
             }
+
             &:not(:hover) .menu-checkbox {
               transition: transform 0.8s ease;
               .menu-checkbox-icon i {
@@ -170,8 +206,8 @@ main {
 
             .menu-text-container {
               width: 100%;
-              padding: 15px 0;
-              padding-left: 10px;
+              padding: 10px 0;
+              padding-left: 14px;
               @include flex(space-between, row);
 
               .menu-text {
@@ -223,6 +259,27 @@ main {
             }
           }
         }
+        @keyframes fadeInUp {
+          0% {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        @for $i from 1 through 3 {
+          .entrees {
+            @include animateBox($i, #{($i - 1) * 0.1s});
+          }
+          .main-dish {
+            @include animateBox($i, #{($i + 1) * 0.1s});
+          }
+          .desert {
+            @include animateBox($i, #{($i + 3) * 0.1s});
+          }
+        }
       }
     }
   }
@@ -230,7 +287,7 @@ main {
 
 // -------------- Footer ---------------
 footer {
-  margin-top: 30px;
+  // margin-top: 30px;
   width: 100%;
   background-color: $light-dark;
   color: white;

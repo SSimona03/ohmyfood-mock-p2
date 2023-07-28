@@ -65,7 +65,7 @@ main .menu {
   position: relative;
   margin-top: -40px;
   z-index: 0;
-  padding: 30px 0;
+  padding: 40px 0;
   border-radius: 30px 30px 0 0px;
   background-color: #f6f6f6;
 }
@@ -76,6 +76,7 @@ main .menu .title-restaurant {
   padding-right: 15px;
   position: relative;
   margin: auto;
+  margin-bottom: 30px;
 }
 main .menu .title-restaurant p {
   margin: 0;
@@ -88,7 +89,7 @@ main .menu .title-restaurant button {
 }
 main .menu .title-restaurant .fav-icon {
   position: absolute;
-  top: 5px;
+  top: -2px;
   right: 20px;
 }
 main .menu .title-restaurant .fav-icon .heart {
@@ -121,15 +122,45 @@ main .menu .menu-list {
   padding-left: 15px;
   padding-right: 15px;
 }
-main .menu .menu-list .entrees p {
-  font-size: 20px;
+main .menu .menu-list .menu-category {
+  position: relative;
+}
+main .menu .menu-list .menu-category .menu-section {
+  font-size: 19px;
   font-weight: 300;
   letter-spacing: 0.7px;
+  margin: 20px 0;
+  margin-left: 5px;
 }
-main .menu .menu-list .entrees .entrees-menu .menu-container {
+main .menu .menu-list .menu-category .menu-section::after {
+  content: "";
+  display: block;
+  height: 3px;
+  background: #99e2d0;
+  margin-top: 5px;
+  border-radius: 3px;
+  width: 0;
+}
+@keyframes lineAnimation {
+  to {
+    width: 50px;
+  }
+}
+main .menu .menu-list .menu-category .delay-one::after {
+  animation: lineAnimation 0.7s ease forwards;
+}
+main .menu .menu-list .menu-category .delay-two::after {
+  animation: lineAnimation 0.7s ease forwards 0.3s;
+}
+main .menu .menu-list .menu-category .delay-three::after {
+  animation: lineAnimation 0.7s ease forwards 0.6s;
+}
+main .menu .menu-list .menu-category .sub-menu .menu-container {
   position: relative;
-  width: 470px;
+  margin-bottom: 15px;
+  max-width: 470px;
   overflow: hidden;
+  border-radius: 18px;
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -137,53 +168,54 @@ main .menu .menu-list .entrees .entrees-menu .menu-container {
   flex-direction: row;
   -webkit-box-shadow: -6px 5px 11px 5px rgba(216, 216, 216, 0.46);
   box-shadow: -6px 5px 11px 5px rgba(216, 216, 216, 0.46);
-  border-radius: 18px;
+  animation: fadeInUp 1s ease-in-out;
+  opacity: 0;
 }
-main .menu .menu-list .entrees .entrees-menu .menu-container:hover {
+main .menu .menu-list .menu-category .sub-menu .menu-container:hover {
   cursor: pointer;
 }
-main .menu .menu-list .entrees .entrees-menu .menu-container:hover .menu-text-container {
+main .menu .menu-list .menu-category .sub-menu .menu-container:hover .menu-text-container {
   width: 77%;
-  transition: width 0.8s ease;
+  transition: width 0.5s ease;
 }
-main .menu .menu-list .entrees .entrees-menu .menu-container:not(:hover) .menu-text-container {
+main .menu .menu-list .menu-category .sub-menu .menu-container:not(:hover) .menu-text-container {
   width: 100%;
-  transition: width 0.8s ease;
+  transition: width 0.5s ease;
 }
-main .menu .menu-list .entrees .entrees-menu .menu-container:hover .menu-checkbox {
+main .menu .menu-list .menu-category .sub-menu .menu-container:hover .menu-checkbox {
   transform: translateX(-100%);
-  transition: transform 0.8s ease;
+  transition: transform 0.6s ease;
 }
-main .menu .menu-list .entrees .entrees-menu .menu-container:hover .menu-checkbox .menu-checkbox-icon i {
+main .menu .menu-list .menu-category .sub-menu .menu-container:hover .menu-checkbox .menu-checkbox-icon i {
   transform: rotate(350deg);
+  transition: transform 0.6s ease;
+}
+main .menu .menu-list .menu-category .sub-menu .menu-container:not(:hover) .menu-checkbox {
   transition: transform 0.8s ease;
 }
-main .menu .menu-list .entrees .entrees-menu .menu-container:not(:hover) .menu-checkbox {
-  transition: transform 0.8s ease;
-}
-main .menu .menu-list .entrees .entrees-menu .menu-container:not(:hover) .menu-checkbox .menu-checkbox-icon i {
+main .menu .menu-list .menu-category .sub-menu .menu-container:not(:hover) .menu-checkbox .menu-checkbox-icon i {
   transform: rotate(0deg);
 }
-main .menu .menu-list .entrees .entrees-menu .menu-container .menu-text-container {
+main .menu .menu-list .menu-category .sub-menu .menu-container .menu-text-container {
   width: 100%;
-  padding: 15px 0;
-  padding-left: 10px;
+  padding: 10px 0;
+  padding-left: 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
 }
-main .menu .menu-list .entrees .entrees-menu .menu-container .menu-text-container .menu-text {
+main .menu .menu-list .menu-category .sub-menu .menu-container .menu-text-container .menu-text {
   max-width: 85%;
 }
-main .menu .menu-list .entrees .entrees-menu .menu-container .menu-text-container .menu-text h3 {
+main .menu .menu-list .menu-category .sub-menu .menu-container .menu-text-container .menu-text h3 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   margin: 0;
   padding: 0;
 }
-main .menu .menu-list .entrees .entrees-menu .menu-container .menu-text-container .menu-text p {
+main .menu .menu-list .menu-category .sub-menu .menu-container .menu-text-container .menu-text p {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -191,14 +223,14 @@ main .menu .menu-list .entrees .entrees-menu .menu-container .menu-text-containe
   padding: 5px 0;
   font-size: 15px;
 }
-main .menu .menu-list .entrees .entrees-menu .menu-container .menu-text-container .price {
+main .menu .menu-list .menu-category .sub-menu .menu-container .menu-text-container .price {
   width: 20px;
   font-weight: 500;
   font-size: 18px;
   padding-right: 10px;
   margin-right: 20px;
 }
-main .menu .menu-list .entrees .entrees-menu .menu-container .menu-checkbox {
+main .menu .menu-list .menu-category .sub-menu .menu-container .menu-checkbox {
   width: 80px;
   position: fix;
   align-self: stretch;
@@ -207,20 +239,65 @@ main .menu .menu-list .entrees .entrees-menu .menu-container .menu-checkbox {
   margin: 0;
   margin-right: -80px;
 }
-main .menu .menu-list .entrees .entrees-menu .menu-container .menu-checkbox .menu-checkbox-icon {
+main .menu .menu-list .menu-category .sub-menu .menu-container .menu-checkbox .menu-checkbox-icon {
   position: relative;
   height: 100%;
 }
-main .menu .menu-list .entrees .entrees-menu .menu-container .menu-checkbox .menu-checkbox-icon i {
+main .menu .menu-list .menu-category .sub-menu .menu-container .menu-checkbox .menu-checkbox-icon i {
   top: 35%;
   right: 30%;
   transform: rotate(50deg);
   font-size: 30px;
   position: absolute;
 }
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+main .menu .menu-list .menu-category .entrees .menu-container:nth-child(1) {
+  animation: fadeInUp 0.4s ease-in-out forwards;
+  animation-delay: 0s;
+}
+main .menu .menu-list .menu-category .main-dish .menu-container:nth-child(1) {
+  animation: fadeInUp 0.4s ease-in-out forwards;
+  animation-delay: 0.2s;
+}
+main .menu .menu-list .menu-category .desert .menu-container:nth-child(1) {
+  animation: fadeInUp 0.4s ease-in-out forwards;
+  animation-delay: 0.4s;
+}
+main .menu .menu-list .menu-category .entrees .menu-container:nth-child(2) {
+  animation: fadeInUp 0.4s ease-in-out forwards;
+  animation-delay: 0.1s;
+}
+main .menu .menu-list .menu-category .main-dish .menu-container:nth-child(2) {
+  animation: fadeInUp 0.4s ease-in-out forwards;
+  animation-delay: 0.3s;
+}
+main .menu .menu-list .menu-category .desert .menu-container:nth-child(2) {
+  animation: fadeInUp 0.4s ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+main .menu .menu-list .menu-category .entrees .menu-container:nth-child(3) {
+  animation: fadeInUp 0.4s ease-in-out forwards;
+  animation-delay: 0.2s;
+}
+main .menu .menu-list .menu-category .main-dish .menu-container:nth-child(3) {
+  animation: fadeInUp 0.4s ease-in-out forwards;
+  animation-delay: 0.4s;
+}
+main .menu .menu-list .menu-category .desert .menu-container:nth-child(3) {
+  animation: fadeInUp 0.4s ease-in-out forwards;
+  animation-delay: 0.6s;
+}
 
 footer {
-  margin-top: 30px;
   width: 100%;
   background-color: #363636;
   color: white;
@@ -272,7 +349,7 @@ footer .footer-info a i {
   }
   main {
     margin-top: 100px;
-    height: calc(100vh - 270px - 33px);
+    height: calc(100vh - 270px - 3px);
     overflow: auto;
   }
   main .main-image {
@@ -310,10 +387,15 @@ footer .footer-info a i {
 }
 @media (min-width: 992px) and (min-width: 1251px) {
   main .main-image img {
-    border-radius: 10px;
+    border-radius: 100px 100px 0 0;
   }
 }
 @media (min-width: 992px) {
+  main .menu {
+    max-width: 1250px;
+    margin: auto;
+    border-radius: 0;
+  }
   footer .footer-info {
     max-width: 1250px;
   }

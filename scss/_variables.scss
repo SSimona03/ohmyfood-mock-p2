@@ -57,3 +57,10 @@ $font-Shrikhand: "Shrikhand", cursive;
   -webkit-box-shadow: -6px 5px 11px 5px rgba(216, 216, 216, 0.46);
   box-shadow: -6px 5px 11px 5px rgba(216, 216, 216, 0.46);
 }
+
+@mixin animateBox($index, $delay) {
+  .menu-container:nth-child(#{$index}) {
+    animation: fadeInUp 0.4s ease-in-out forwards;
+    animation-delay: $delay;
+  }
+}
