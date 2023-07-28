@@ -16,9 +16,14 @@ $width: 1250px;
       margin: auto;
       img {
         @media (min-width: 1251px) {
-          border-radius: 10px;
+          border-radius: 100px 100px 0 0;
         }
       }
+    }
+    .menu {
+      @include desktop-max-w;
+      margin: auto;
+      border-radius: 0;
     }
   }
   // -------------- Footer ---------------

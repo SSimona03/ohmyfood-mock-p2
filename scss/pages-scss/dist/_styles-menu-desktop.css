@@ -1,0 +1,28 @@
+@media (min-width: 992px) {
+  header .header-menu {
+    max-width: 1250px;
+    margin: auto;
+  }
+
+  main .main-image {
+    max-width: 1250px;
+    margin: auto;
+  }
+}
+@media (min-width: 992px) and (min-width: 1251px) {
+  main .main-image img {
+    border-radius: 100px 100px 0 0;
+  }
+}
+@media (min-width: 992px) {
+  main .menu {
+    max-width: 1250px;
+    margin: auto;
+    border-radius: 0;
+  }
+}
+@media (min-width: 992px) {
+  footer .footer-info {
+    max-width: 1250px;
+  }
+}
