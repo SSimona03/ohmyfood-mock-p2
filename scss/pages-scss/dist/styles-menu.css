@@ -270,6 +270,7 @@ footer .footer-info a i {
     text-align: left;
     padding-left: 10px;
   }
+
   main {
     margin-top: 100px;
     height: calc(100vh - 270px - 33px);
@@ -279,6 +280,7 @@ footer .footer-info a i {
     height: 350px;
     padding-top: 0px;
   }
+
   footer .footer-info {
     max-width: unset;
     text-align: center;
@@ -303,6 +305,7 @@ footer .footer-info a i {
     max-width: 1250px;
     margin: auto;
   }
+
   main .main-image {
     max-width: 1250px;
     margin: auto;
