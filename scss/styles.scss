@@ -19,8 +19,59 @@ input[type="submit"] {
   -webkit-border-radius: 0;
   background-color: inherit;
 }
-// -------------- Header ---------------
 
+// -------------- loading animation ---------------
+
+.container-loader {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  height: calc(100vh - 100px);
+  width: 100vw;
+  z-index: 2;
+  opacity: 1;
+  display: block;
+  animation: moveBackward 0.7s 0.7s ease forwards;
+  .title-loader {
+    margin: auto;
+    text-align: center;
+  }
+  .loader {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    top: 30%;
+    &::before,
+    &::after {
+      content: "";
+      border-radius: 50%;
+      position: absolute;
+      inset: 0;
+      box-shadow: 0 0 10px 2px rgba(243, 241, 241, 0.3) inset;
+    }
+    &::after {
+      box-shadow: 0 3px 0 #ca259b inset;
+      animation: rotate 1s linear infinite;
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moveBackward {
+  to {
+    z-index: -1;
+    opacity: 0;
+  }
+}
+// -------------- Header ---------------
 header {
   width: 100vw;
   max-width: 100%;
@@ -30,7 +81,9 @@ header {
   background-color: white;
   @include flex(center, column);
   z-index: 1;
-
+  visibility: hidden;
+  opacity: 0;
+  animation: fadeIn 1s 0.7s forwards;
   .logo {
     top: 0;
     position: absolute;
@@ -80,10 +133,15 @@ header {
     }
   }
 }
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
 
 main {
   margin-top: 110px;
-
   // -------------- Intro ---------------
   .intro {
     position: relative;
