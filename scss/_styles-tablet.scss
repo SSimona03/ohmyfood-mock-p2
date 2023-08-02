@@ -29,7 +29,7 @@
     height: calc(100vh - 203px - 100px);
     overflow: auto;
     .tablet-desktop-box {
-      border-radius: 5px;
+      border-radius: 15px;
       margin: auto;
       @include flex(justify-content, row);
       background-color: $dark-gray;

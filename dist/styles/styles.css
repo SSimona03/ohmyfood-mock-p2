@@ -356,7 +356,7 @@ footer .footer-info a i {
     overflow: auto;
   }
   main .tablet-desktop-box {
-    border-radius: 5px;
+    border-radius: 15px;
     margin: auto;
     display: flex;
     justify-content: justify-content;
