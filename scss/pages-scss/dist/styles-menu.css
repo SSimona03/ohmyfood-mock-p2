@@ -305,6 +305,29 @@ main .menu .menu-list .menu-category .desert .menu-container:nth-child(4) {
   animation: fadeInUp 0.4s ease-in-out forwards;
   animation-delay: 0.7s;
 }
+main .menu .btn-container {
+  width: 100%;
+  padding: 40px 0;
+  margin: unset;
+  display: flex;
+}
+main .menu .btn-container .btn-submit {
+  cursor: pointer;
+  width: 180px;
+  padding: 13px 25px;
+  border-radius: 20px;
+  color: white;
+  border: none;
+  box-shadow: 0px 7px 17px 2px #d3cdd2;
+  background: #9356dc;
+  background: -moz-linear-gradient(0deg, #9356dc 0%, P #dd6abd 81%);
+  background: -webkit-linear-gradient(0deg, #9356dc 0%, #dd6abd 81%);
+  background: linear-gradient(0deg, #9356dc 0%, #dd6abd 81%);
+  margin: auto;
+}
+main .menu .btn-container .btn-submit:hover {
+  filter: brightness(110%);
+}
 
 footer {
   width: 100%;

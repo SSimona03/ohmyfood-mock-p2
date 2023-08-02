@@ -280,6 +280,42 @@ main {
         }
       }
     }
+    .btn-container {
+      width: 100%;
+      padding: 40px 0;
+      margin: unset;
+      display: flex;
+      .btn-submit {
+        cursor: pointer;
+        width: 180px;
+        padding: 13px 25px;
+        border-radius: 20px;
+        color: white;
+        border: none;
+        box-shadow: 0px 7px 17px 2px #d3cdd2;
+        background: rgb(147, 86, 220);
+        background: -moz-linear-gradient(
+          0deg,
+          rgb(147, 86, 220) 0%,
+          P rgb(221, 106, 189) 81%
+        );
+        background: -webkit-linear-gradient(
+          0deg,
+          rgb(147, 86, 220) 0%,
+          rgb(221, 106, 189) 81%
+        );
+        background: linear-gradient(
+          0deg,
+          rgb(147, 86, 220) 0%,
+          rgb(221, 106, 189) 81%
+        );
+        margin: auto;
+
+        &:hover {
+          filter: brightness(110%);
+        }
+      }
+    }
   }
 }
 
