@@ -30,13 +30,7 @@ header {
     @include mobile-max-w;
     a {
       text-decoration: unset;
-      p {
-        color: black;
-        width: 50px;
-        margin: 0;
-        font-size: 30px;
-        font-weight: 900;
-      }
+      margin: 0;
     }
 
     .logo {
@@ -213,9 +207,10 @@ main {
               .menu-text {
                 max-width: 85%;
                 h3 {
+                  font-weight: 500;
                   overflow: hidden;
                   text-overflow: ellipsis;
-                  white-space: nowrap;
+                  white-space: wrap;
                   margin: 0;
                   padding: 0;
                 }
@@ -226,14 +221,17 @@ main {
                   margin: 0;
                   padding: 5px 0;
                   font-size: 15px;
+                  font-weight: 300;
                 }
               }
+              // -------------- Item BOX price------------------
               .price {
-                width: 20px;
+                padding-top: 25px;
+                width: 40px;
                 font-weight: 500;
                 font-size: 18px;
-                padding-right: 10px;
-                margin-right: 20px;
+                padding-right: 5px;
+                margin-right: 10px;
               }
             }
 
@@ -269,7 +267,7 @@ main {
             transform: translateY(0);
           }
         }
-        @for $i from 1 through 3 {
+        @for $i from 1 through 4 {
           .entrees {
             @include animateBox($i, #{($i - 1) * 0.1s});
           }
