@@ -20,10 +20,54 @@ $width: 1250px;
         }
       }
     }
+    // -------------- Menu Section ------------------
+
     .menu {
       @include desktop-max-w;
       margin: auto;
       border-radius: 0;
+      position: relative;
+      // --------------  TITLE ------------------
+      .title-restaurant {
+        position: absolute;
+        left: 20px;
+        text-align: right;
+        @include flex(default, row-reverse);
+        button {
+          position: absolute;
+          text-align: left;
+          margin-left: 50px;
+        }
+      }
+      .menu-list {
+        max-width: unset;
+        position: unset;
+        margin-top: 50px;
+
+        .menu-category {
+          position: unset;
+          margin-top: 5px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+
+        .sub-menu {
+          margin-top: 20px;
+          width: 100%;
+          @include flex(space-between, row);
+          flex-wrap: wrap;
+          //-------------- Item BOX text ------------------
+        }
+        .menu-text {
+          overflow: hidden;
+          h3 {
+            white-space: nowrap !important;
+          }
+        }
+        .menu-container {
+          width: 32%;
+        }
+      }
     }
   }
   // -------------- Footer ---------------
