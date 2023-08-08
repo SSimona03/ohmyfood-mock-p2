@@ -140,6 +140,8 @@ header .box-max-w .location form input:active, header .box-max-w .location form 
   }
 }
 main {
+  opacity: 0;
+  animation: fadeIn 1s 0.7s forwards;
   margin-top: 110px;
 }
 main .intro {
@@ -342,6 +344,8 @@ main .restaurants .res-group .res-cards .res-card-one .res-card-one-info .res-ca
 }
 
 footer {
+  opacity: 0;
+  animation: fadeIn 1s 0.7s forwards;
   margin-top: 30px;
   width: 100%;
   background-color: #363636;
