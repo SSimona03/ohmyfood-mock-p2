@@ -25,7 +25,7 @@ input[type="submit"] {
 .container-loader {
   position: absolute;
   background-color: rgb(255, 255, 255);
-  height: calc(100vh - 100px);
+  height: calc(100vh);
   width: 100vw;
   z-index: 2;
   opacity: 1;
@@ -360,6 +360,10 @@ footer {
       color: white;
       i {
         padding-right: 10px;
+      }
+      &:hover,
+      &:active {
+        color: rgba(255, 255, 255, 0.538);
       }
     }
   }

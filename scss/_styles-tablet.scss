@@ -2,7 +2,11 @@
 
 @media (min-width: 768px) {
   // -------------- Header -------------------
-
+  body {
+    min-height: 100vh;
+    @include flex(space-between, column);
+    align-items: unset;
+  }
   header {
     @include flex(space-between, row);
     .box-max-w {
@@ -26,7 +30,7 @@
 
   main {
     margin-top: 100px;
-    height: calc(100vh - 203px - 100px);
+    // height: calc(100vh - 203px - 100px);
     overflow: auto;
     .tablet-desktop-box {
       border-radius: 15px;

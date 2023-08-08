@@ -20,8 +20,8 @@ input[type=submit] {
 
 .container-loader {
   position: absolute;
-  background-color: rgb(255, 255, 255);
-  height: 100vh;
+  background-color: white;
+  height: calc(100vh);
   width: 100vw;
   z-index: 2;
   opacity: 1;
@@ -167,10 +167,10 @@ main .intro a {
   border-radius: 20px;
   color: white;
   border: none;
-  background: rgb(147, 86, 220);
-  background: -moz-linear-gradient(0deg, rgb(147, 86, 220) 0%, P rgb(221, 106, 189) 81%);
-  background: -webkit-linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(221, 106, 189) 81%);
-  background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(221, 106, 189) 81%);
+  background: #9356dc;
+  background: -moz-linear-gradient(0deg, #9356dc 0%, P #dd6abd 81%);
+  background: -webkit-linear-gradient(0deg, #9356dc 0%, #dd6abd 81%);
+  background: linear-gradient(0deg, #9356dc 0%, #dd6abd 81%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#dd6abd",GradientType=1);
   font-family: "Roboto", sans-serif;
   font-weight: 500;
@@ -390,6 +390,7 @@ footer .footer-info a:hover, footer .footer-info a:active {
     flex-direction: column;
     align-items: unset;
   }
+
   header {
     display: flex;
     justify-content: space-between;
@@ -418,6 +419,7 @@ footer .footer-info a:hover, footer .footer-info a:active {
     margin-left: 25px;
     margin-right: 25px;
   }
+
   main {
     margin-top: 100px;
     overflow: auto;
@@ -484,6 +486,7 @@ footer .footer-info a:hover, footer .footer-info a:active {
   main .restaurants .res-group .res-cards .res-card-one a p {
     text-align: left;
   }
+
   footer .footer-info {
     max-width: unset;
     text-align: center;
@@ -509,6 +512,7 @@ footer .footer-info a:hover, footer .footer-info a:active {
     max-width: 1250px;
     margin: auto;
   }
+
   main .tablet-desktop-box {
     max-width: 1200px;
     margin: auto;
@@ -545,6 +549,7 @@ footer .footer-info a:hover, footer .footer-info a:active {
   main .restaurants .res-group .res-cards .res-card-one a .res-card-one-info .res-card-one-logo-02 {
     right: 15px;
   }
+
   footer .footer-info {
     max-width: 1250px;
   }

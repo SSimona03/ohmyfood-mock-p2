@@ -1,6 +1,11 @@
 @import "../_variables";
 
 @media (min-width: 768px) {
+  body {
+    min-height: 100vh;
+    @include flex(space-between, column);
+    align-items: unset;
+  }
   // -------------- Header ------------------
   header {
     margin: auto;
@@ -18,7 +23,7 @@
   // -------------- Main ------------------
   main {
     margin-top: 100px;
-    height: calc(100vh - 270px - 3px);
+    // height: calc(100vh - 270px - 3px);
     overflow: auto;
     .main-image {
       height: 350px;
