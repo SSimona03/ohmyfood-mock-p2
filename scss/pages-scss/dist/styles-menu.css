@@ -169,29 +169,75 @@ main .menu .menu-list .menu-category .sub-menu .menu-container {
 main .menu .menu-list .menu-category .sub-menu .menu-container:hover {
   cursor: pointer;
 }
-main .menu .menu-list .menu-category .sub-menu .menu-container:hover .menu-text-container {
+main
+  .menu
+  .menu-list
+  .menu-category
+  .sub-menu
+  .menu-container:hover
+  .menu-text-container {
   width: 77%;
   transition: width 0.5s ease;
 }
-main .menu .menu-list .menu-category .sub-menu .menu-container:not(:hover) .menu-text-container {
+main
+  .menu
+  .menu-list
+  .menu-category
+  .sub-menu
+  .menu-container:not(:hover)
+  .menu-text-container {
   width: 100%;
   transition: width 0.5s ease;
 }
-main .menu .menu-list .menu-category .sub-menu .menu-container:hover .menu-checkbox {
+main
+  .menu
+  .menu-list
+  .menu-category
+  .sub-menu
+  .menu-container:hover
+  .menu-checkbox {
   transform: translateX(-100%);
   transition: transform 0.6s ease;
 }
-main .menu .menu-list .menu-category .sub-menu .menu-container:hover .menu-checkbox .menu-checkbox-icon i {
+main
+  .menu
+  .menu-list
+  .menu-category
+  .sub-menu
+  .menu-container:hover
+  .menu-checkbox
+  .menu-checkbox-icon
+  i {
   transform: rotate(350deg);
   transition: transform 0.6s ease;
 }
-main .menu .menu-list .menu-category .sub-menu .menu-container:not(:hover) .menu-checkbox {
+main
+  .menu
+  .menu-list
+  .menu-category
+  .sub-menu
+  .menu-container:not(:hover)
+  .menu-checkbox {
   transition: transform 0.8s ease;
 }
-main .menu .menu-list .menu-category .sub-menu .menu-container:not(:hover) .menu-checkbox .menu-checkbox-icon i {
+main
+  .menu
+  .menu-list
+  .menu-category
+  .sub-menu
+  .menu-container:not(:hover)
+  .menu-checkbox
+  .menu-checkbox-icon
+  i {
   transform: rotate(0deg);
 }
-main .menu .menu-list .menu-category .sub-menu .menu-container .menu-text-container {
+main
+  .menu
+  .menu-list
+  .menu-category
+  .sub-menu
+  .menu-container
+  .menu-text-container {
   width: 100%;
   padding: 10px 0;
   padding-left: 14px;
@@ -200,10 +246,25 @@ main .menu .menu-list .menu-category .sub-menu .menu-container .menu-text-contai
   align-items: center;
   flex-direction: row;
 }
-main .menu .menu-list .menu-category .sub-menu .menu-container .menu-text-container .menu-text {
+main
+  .menu
+  .menu-list
+  .menu-category
+  .sub-menu
+  .menu-container
+  .menu-text-container
+  .menu-text {
   max-width: 85%;
 }
-main .menu .menu-list .menu-category .sub-menu .menu-container .menu-text-container .menu-text h3 {
+main
+  .menu
+  .menu-list
+  .menu-category
+  .sub-menu
+  .menu-container
+  .menu-text-container
+  .menu-text
+  h3 {
   font-weight: 500;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -211,7 +272,15 @@ main .menu .menu-list .menu-category .sub-menu .menu-container .menu-text-contai
   margin: 0;
   padding: 0;
 }
-main .menu .menu-list .menu-category .sub-menu .menu-container .menu-text-container .menu-text p {
+main
+  .menu
+  .menu-list
+  .menu-category
+  .sub-menu
+  .menu-container
+  .menu-text-container
+  .menu-text
+  p {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -220,7 +289,14 @@ main .menu .menu-list .menu-category .sub-menu .menu-container .menu-text-contai
   font-size: 15px;
   font-weight: 300;
 }
-main .menu .menu-list .menu-category .sub-menu .menu-container .menu-text-container .price {
+main
+  .menu
+  .menu-list
+  .menu-category
+  .sub-menu
+  .menu-container
+  .menu-text-container
+  .price {
   padding-top: 25px;
   width: 40px;
   font-weight: 500;
@@ -237,11 +313,26 @@ main .menu .menu-list .menu-category .sub-menu .menu-container .menu-checkbox {
   margin: 0;
   margin-right: -80px;
 }
-main .menu .menu-list .menu-category .sub-menu .menu-container .menu-checkbox .menu-checkbox-icon {
+main
+  .menu
+  .menu-list
+  .menu-category
+  .sub-menu
+  .menu-container
+  .menu-checkbox
+  .menu-checkbox-icon {
   position: relative;
   height: 100%;
 }
-main .menu .menu-list .menu-category .sub-menu .menu-container .menu-checkbox .menu-checkbox-icon i {
+main
+  .menu
+  .menu-list
+  .menu-category
+  .sub-menu
+  .menu-container
+  .menu-checkbox
+  .menu-checkbox-icon
+  i {
   top: 35%;
   right: 30%;
   transform: rotate(50deg);
@@ -367,6 +458,15 @@ footer .footer-info a i {
 }
 
 @media (min-width: 768px) {
+  body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    align-items: unset;
+  }
+
   header {
     margin: auto;
   }
@@ -383,7 +483,6 @@ footer .footer-info a i {
 
   main {
     margin-top: 100px;
-    height: calc(100vh - 270px - 3px);
     overflow: auto;
   }
   main .main-image {
