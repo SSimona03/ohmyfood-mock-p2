@@ -45,6 +45,10 @@
         @include flex(space-between, row);
         a {
           margin-top: 20px;
+          &:hover,
+          &:active {
+            color: rgba(255, 255, 255, 0.538);
+          }
         }
       }
     }

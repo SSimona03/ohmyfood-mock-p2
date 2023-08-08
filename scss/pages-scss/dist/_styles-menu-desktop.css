@@ -69,4 +69,7 @@
   footer .footer-info {
     max-width: 1250px;
   }
+  footer .footer-info:hover, footer .footer-info:active {
+    color: rgba(255, 255, 255, 0.538);
+  }
 }

@@ -362,6 +362,9 @@ footer .footer-info a {
   text-decoration: none;
   color: white;
 }
+footer .footer-info a:hover, footer .footer-info a:active {
+  color: rgba(255, 255, 255, 0.538);
+}
 footer .footer-info a i {
   padding-right: 10px;
 }
@@ -413,6 +416,9 @@ footer .footer-info a i {
   }
   footer .footer-info .footer-into-links a {
     margin-top: 20px;
+  }
+  footer .footer-info .footer-into-links a:hover, footer .footer-info .footer-into-links a:active {
+    color: rgba(255, 255, 255, 0.538);
   }
 }
 @media (min-width: 992px) {
@@ -482,5 +488,8 @@ footer .footer-info a i {
   }
   footer .footer-info {
     max-width: 1250px;
+  }
+  footer .footer-info:hover, footer .footer-info:active {
+    color: rgba(255, 255, 255, 0.538);
   }
 }

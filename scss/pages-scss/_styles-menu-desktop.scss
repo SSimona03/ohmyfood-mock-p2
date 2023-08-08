@@ -74,6 +74,10 @@ $width: 1250px;
   footer {
     .footer-info {
       @include desktop-max-w;
+      &:hover,
+      &:active {
+        color: rgba(255, 255, 255, 0.538);
+      }
     }
   }
 }
