@@ -94,13 +94,13 @@
     margin-left: 5px;
     margin-right: 5px;
   }
-  main .restaurants .res-group .res-cards .res-card-one a .res-card-img img {
+  main .restaurants .res-group .res-cards .res-card-one .res-card-img img {
     height: 230px;
   }
-  main .restaurants .res-group .res-cards .res-card-one a .res-card-one-info .res-card-one-logo-02 {
+  main .restaurants .res-group .res-cards .res-card-one .res-card-one-info .res-card-one-logo-02 {
     right: 9px;
   }
-  main .restaurants .res-group .res-cards .res-card-one a p {
+  main .restaurants .res-group .res-cards .res-card-one p {
     text-align: left;
   }
 

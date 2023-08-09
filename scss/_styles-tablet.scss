@@ -81,21 +81,20 @@
             height: 330px;
             margin-left: 5px;
             margin-right: 5px;
-            a {
-              .res-card-img {
-                img {
-                  height: 230px;
-                }
-              }
-              .res-card-one-info {
-                .res-card-one-logo-02 {
-                  right: 9px;
-                }
-              }
 
-              p {
-                text-align: left;
+            .res-card-img {
+              img {
+                height: 230px;
               }
+            }
+            .res-card-one-info {
+              .res-card-one-logo-02 {
+                right: 9px;
+              }
+            }
+
+            p {
+              text-align: left;
             }
           }
         }
