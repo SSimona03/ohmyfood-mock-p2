@@ -113,7 +113,7 @@ header .box-max-w .location form {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: center;
+  flex-direction: row;
   max-width: 500px;
   margin: auto;
   padding-left: 15px;
@@ -330,7 +330,10 @@ main .restaurants .res-group .res-cards .res-card-one .res-card-one-info .res-ca
 main .restaurants .res-group .res-cards .res-card-one .res-card-one-info .res-card-one-logo-02 .heart :active {
   cursor: pointer;
   animation: opacity 0.4s ease-in forwards;
-  fill: url(#gradient);
+  fill: url(#gradient01);
+  fill: url(#gradient02);
+  fill: url(#gradient03);
+  fill: url(#gradient04);
   stroke: #ffffff;
 }
 @keyframes opacity {
@@ -434,7 +437,7 @@ footer .footer-info a:hover, footer .footer-info a:active {
     border-radius: 15px;
     margin: auto;
     display: flex;
-    justify-content: justify-content;
+    justify-content: center;
     align-items: center;
     flex-direction: row;
     background-color: #eaeaea;

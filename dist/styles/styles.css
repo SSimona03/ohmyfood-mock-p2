@@ -87,7 +87,6 @@ header .logo {
   padding: 13px 0;
   text-align: center;
   width: 100%;
-  -webkit-box-shadow: -1px 2px 7px 2px rgba(0, 0, 0, 0.16);
   box-shadow: -1px 2px 7px 2px rgba(0, 0, 0, 0.16);
 }
 header .box-max-w {
@@ -113,7 +112,7 @@ header .box-max-w .location form {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: center;
+  flex-direction: row;
   max-width: 500px;
   margin: auto;
   padding-left: 15px;
@@ -170,8 +169,6 @@ main .intro a {
   color: white;
   border: none;
   background: rgb(147, 86, 220);
-  background: -moz-linear-gradient(0deg, rgb(147, 86, 220) 0%, P rgb(221, 106, 189) 81%);
-  background: -webkit-linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(221, 106, 189) 81%);
   background: linear-gradient(0deg, rgb(147, 86, 220) 0%, rgb(221, 106, 189) 81%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#dd6abd",GradientType=1);
   font-family: "Roboto", sans-serif;
@@ -211,7 +208,6 @@ main .howItWorks .howItWorks-one-card {
   padding: 5px;
   background-color: #f6f6f6;
   border-radius: 20px;
-  -webkit-box-shadow: 2px 2px 14px 0px #d0d0d0;
   box-shadow: 2px 2px 14px 0px #d0d0d0;
   font-weight: 500;
   position: relative;
@@ -285,7 +281,8 @@ main .restaurants .res-group .res-cards .res-card-one .res-card-img img {
   border-radius: 15px 15px 0 0;
   width: 100%;
   height: 150px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main .restaurants .res-group .res-cards .res-card-one .res-card-img p {
   position: absolute;
@@ -330,7 +327,10 @@ main .restaurants .res-group .res-cards .res-card-one .res-card-one-info .res-ca
 main .restaurants .res-group .res-cards .res-card-one .res-card-one-info .res-card-one-logo-02 .heart :active {
   cursor: pointer;
   animation: opacity 0.4s ease-in forwards;
-  fill: url(#gradient);
+  fill: url(#gradient01);
+  fill: url(#gradient02);
+  fill: url(#gradient03);
+  fill: url(#gradient04);
   stroke: #ffffff;
 }
 @keyframes opacity {
@@ -413,7 +413,6 @@ footer .footer-info a:hover, footer .footer-info a:active {
     margin-right: 25px;
     width: 200px;
     position: relative;
-    -webkit-box-shadow: unset;
     box-shadow: unset;
   }
   header .box-max-w .location {
@@ -432,7 +431,7 @@ footer .footer-info a:hover, footer .footer-info a:active {
     border-radius: 15px;
     margin: auto;
     display: flex;
-    justify-content: justify-content;
+    justify-content: center;
     align-items: center;
     flex-direction: row;
     background-color: #eaeaea;

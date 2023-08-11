@@ -35,7 +35,7 @@
     .tablet-desktop-box {
       border-radius: 15px;
       margin: auto;
-      @include flex(justify-content, row);
+      @include flex(center, row);
       background-color: $dark-gray;
       .intro {
         flex: 1;

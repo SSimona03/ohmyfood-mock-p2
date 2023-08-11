@@ -46,7 +46,7 @@ $font-Shrikhand: "Shrikhand", cursive;
   max-width: 1250px;
 }
 
-@mixin flex($justify-c, $direction: default) {
+@mixin flex($justify-c, $direction) {
   display: flex;
   justify-content: $justify-c;
   align-items: center;

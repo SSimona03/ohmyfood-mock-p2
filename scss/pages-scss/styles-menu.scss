@@ -169,11 +169,13 @@ main {
             animation: fadeInUp 1s ease-in-out;
             opacity: 0;
 
-            &:hover {
+            &:hover,
+            &:active {
               cursor: pointer;
             }
             // -------------- Item BOX text side hover------------------
-            &:hover .menu-text-container {
+            &:hover .menu-text-container,
+            &:active .menu-text-container {
               width: 77%;
               transition: width 0.5s ease;
             }
@@ -183,7 +185,8 @@ main {
               transition: width 0.5s ease;
             }
             // -------------- Item BOX checkbox hover------------------
-            &:hover .menu-checkbox {
+            &:hover .menu-checkbox,
+            &:active .menu-checkbox {
               transform: translateX(-100%);
               transition: transform 0.6s ease;
               .menu-checkbox-icon i {
@@ -211,7 +214,7 @@ main {
                   font-weight: 500;
                   overflow: hidden;
                   text-overflow: ellipsis;
-                  white-space: wrap;
+                  white-space: nowrap;
                   margin: 0;
                   padding: 0;
                 }
@@ -221,6 +224,7 @@ main {
                   white-space: nowrap;
                   margin: 0;
                   padding: 5px 0;
+                  padding-right: 2px;
                   font-size: 15px;
                   font-weight: 300;
                 }
@@ -232,6 +236,7 @@ main {
                 font-weight: 500;
                 font-size: 18px;
                 padding-right: 5px;
+                padding-left: 7px;
                 margin-right: 10px;
               }
             }
@@ -243,10 +248,12 @@ main {
               background-color: $green;
               padding: 0;
               margin: 0;
+
               margin-right: -80px;
               .menu-checkbox-icon {
                 position: relative;
                 height: 100%;
+
                 i {
                   top: 35%;
                   right: 30%;
@@ -313,7 +320,8 @@ main {
         );
         margin: auto;
 
-        &:hover {
+        &:hover,
+        &:active {
           filter: brightness(110%);
         }
       }
