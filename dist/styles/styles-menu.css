@@ -12,7 +12,7 @@ body {
 
 header {
   width: 100vw;
-  position: fixed;
+  position: static;
   top: 0;
   padding-top: 20px;
   padding-bottom: 10px;
@@ -232,7 +232,7 @@ main .menu .menu-list .menu-category .sub-menu .menu-container .menu-text-contai
 }
 main .menu .menu-list .menu-category .sub-menu .menu-container .menu-checkbox {
   width: 80px;
-  position: fix;
+  position: static;
   align-self: stretch;
   background-color: #99e2d0;
   padding: 0;
